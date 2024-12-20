@@ -1,9 +1,14 @@
-import Application from 'your-app-name/app';
+import Application from '@ember/application';
 import { setApplication } from '@ember/test-helpers';
-import config from './config/environment';
-import { start } from 'ember-cli-test-loader';
-import { initialize } from 'ember-dependency-lookup';
+import Resolver from 'ember-resolver';
 
-setApplication(Application.create(config.APP));
+class MyApp extends Application {
+  modulePrefix = 'frontend';  // Prefixo de módulos
+  podModulePrefix = 'frontend/pods';  // Prefixo de pods
+  Resolver = Resolver;  // Resolver
+}
 
-start();
+// Inicializa a aplicação no elemento do DOM
+setApplication(MyApp.create());
+
+export default MyApp;

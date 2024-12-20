@@ -22,6 +22,8 @@ services:
     environment:
       DATABASE_HOST: db
       DATABASE_PASSWORD: password
+      RAILS_ENV: development  # Definindo o ambiente como desenvolvimento
+    command: bash -c "bundle exec rails server -b '0.0.0.0'"  # Comando para iniciar o Rails
 
 volumes:
   db_data:
