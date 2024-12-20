@@ -1,0 +1,5 @@
+<h1>Editar Post</h1>
+
+<PostEditForm @post={{this.model}} @onSave={{action this.savePost}} />
+
+<button type="button" {{on "click" this.deletePost}}>Excluir</button>

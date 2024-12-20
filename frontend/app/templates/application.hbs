@@ -1,0 +1,19 @@
+{{page-title "Frontend"}}
+
+{{outlet}}
+
+{{! The following component displays Ember's default welcome message. }}
+<h1>Posts</h1>
+
+{{#each @model as |post|}}
+  <div class="post">
+    <h2>{{post.title}}</h2>
+    <p>{{post.content}}</p>
+    <p>Publicado em: {{post.published_at}}</p>
+
+    <button type="button" {{on "click" (fn this.editPost post)}}>Editar</button>
+    <button type="button" {{on "click" (fn this.deletePost post)}}>Excluir</button>
+  </div>
+{{/each}}
+
+{{! Feel free to remove this! }}

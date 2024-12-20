@@ -1,0 +1,11 @@
+/* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+.post {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  color: #333;
+}
